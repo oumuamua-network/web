@@ -1,0 +1,44 @@
+// select
+.select-enter {
+  opacity: 0;
+  transform: translate3d(0, -20px, 0);
+}
+
+.select-enter-active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: all .3s ease-out;
+}
+
+.select-leave {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.select-leave-active {
+  opacity: 0;
+  transform: translate3d(0, -20px, 0);
+  transition: all .3s ease-out;
+}
+
+// dialog
+.scaleOut-enter {
+  opacity: 0;
+  transform: scale(.8);
+}
+
+.scaleOut-leave,
+.scaleOut-enter-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.scaleOut-enter-active,
+.scaleOut-leave-active {
+  transition: all .3s ease-out;
+}
+
+.scaleOut-leave-active {
+  transform: scale(.8);
+  opacity: 0;
+}

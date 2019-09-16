@@ -1,0 +1,38 @@
+.header {
+  line-height: 100px;
+  height: 100px;
+
+  a {
+    color: rgba(#fff, .8);;
+    font-size: 18px;
+    margin-left: 40px;
+    line-height: 100px;
+  }
+
+  .active {
+    color: #2495FF;
+  }
+}
+
+.right {
+  float: right;
+  a {
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    border-radius: 25px;
+    text-align: center;
+    line-height: 50px;
+  }
+
+  a:nth-child(1) {
+    background:linear-gradient(90deg,rgba(61,129,234,1) 0%,rgba(71,173,224,1) 100%);
+    color: #fff;
+  }
+
+  a:nth-child(2) {
+    border:1px solid rgba(36,149,255,1);
+    color: #2495FF;
+  }
+}
+

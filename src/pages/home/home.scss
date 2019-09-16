@@ -1,0 +1,140 @@
+.home {
+  padding: 70px;
+  position: relative;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.doc {
+  font-size: 38px;
+  padding-right: 200px; 
+  margin-bottom: 160px;
+  color: rgba(#fff, .8);
+  p {
+    line-height: 1.5;
+  }
+}
+
+.background {
+  position: absolute;
+  right: 0px;
+  top: 80px;
+}
+
+.picBox {
+  margin-bottom: 160px;
+
+  p {
+    font-size: 50px;
+    color: #42D9B6;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+    span {
+      font-size: 30px;
+    }
+  }
+
+  .picItem {
+    display: inline-block;
+    margin-right: 50px;
+  }
+
+  .picItem div {
+    height: 70px;
+    display: inline-block;
+    padding: 0 50px;
+    border-radius: 35px;
+    line-height: 70px;
+    color: rgba(#fff, .8);
+    background-color: rgba(#87C6FF, .1);
+    font-size: 30px;
+  }
+}
+
+.bodys {
+  padding: 0 50px;
+  position: relative;
+
+  span {
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: rgba(76, 172, 223, .5);
+    position: relative;
+    margin-right: calc(25% - 100px);
+    vertical-align: top;
+
+    i {
+      position: absolute;
+      display: block;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: rgb(76, 172, 223);
+      top: 17px;
+      left: 17px;
+    }
+  }
+
+  .lastspan {
+    margin-right: 0px;
+  }
+
+  b {
+    position: absolute;
+    left: 0px;
+    top: 37px;
+    height: 6px;
+    background: rgb(76, 172, 223);
+    right: 112px;
+    left: 112px;
+  }
+}
+
+.top {
+  padding: 0 50px;
+  height: 100px;
+  position: relative;
+  span {
+    font-size: 30px;
+    position: absolute;
+    top: 0px;
+  }
+
+  span:nth-child(1) {
+    left: calc(25% - 10px);
+  }
+
+  span:nth-child(2) {
+    left: calc(75% - 120px);
+  }
+}
+
+.bottom {
+  padding: 0 50px;
+  height: 100px;
+  position: relative;
+  span {
+    font-size: 30px;
+    position: absolute;
+    bottom: 0px;
+  }
+
+  span:nth-child(1) {
+    left: 30px;
+  }
+
+  span:nth-child(2) {
+    left: calc(50% - 60px);
+  }
+
+  span:nth-child(3) {
+    right: 10px;
+  }
+}
