@@ -1,0 +1,62 @@
+.loan {
+  width: 100%;
+}
+
+.body {
+  width: 900px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.item {
+  margin-bottom: 80px;
+  width: 900px;
+  height: 500px;
+  border-radius: 20px;
+  padding: 50px;
+  background-color: rgba(#000000, .23);
+  font-size: 24px;
+  color: rgba(#fff, .8);
+}
+
+.rateBox {
+  height: 60px;
+  margin:  20px 0;
+}
+
+.rate {
+  display: inline-block;
+  height: 12px;
+  width: 600px;
+  background-color: #fff;
+  border: 2px solid rgba(#3590E4, .79);
+  border-radius: 6px;
+  overflow: hidden;
+
+  span {
+    display: block;
+    height: 12px;
+    background-color: rgba(#3590E4, .79);
+  }
+}
+
+.btn {
+  display: inline-block;
+  width: 130px;
+  height: 50px;
+  line-height: 130px;
+  cursor: pointer;
+  margin-left: 68px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 25px;
+  background:linear-gradient(90deg,rgba(62,129,232,1) 0%,rgba(70,172,224,1) 100%);
+}
+
+.p {
+  margin-bottom: 20px;
+
+  b {
+    color: #fff;
+  }
+}
