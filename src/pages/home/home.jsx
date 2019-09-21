@@ -2,6 +2,7 @@ import React from 'react'
 import Component from '@/Component'
 import classs from 'classnames'
 import { ApiPromise, WsProvider } from '@polkadot/api';
+import keyring from '@polkadot/ui-keyring';
 import styles from './home.scss'
 
 class Home extends Component {
@@ -17,6 +18,12 @@ class Home extends Component {
         console.log(e, 'error')
       })
     })
+
+    keyring.loadAll({
+      isDevelopment: true
+    });
+
+    console.log(keyring, 'keyring')
   }
 
   render() {
