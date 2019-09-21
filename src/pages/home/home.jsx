@@ -1,16 +1,31 @@
 import React from 'react'
 import Component from '@/Component'
 import classs from 'classnames'
+import { ApiPromise, WsProvider } from '@polkadot/api';
 import styles from './home.scss'
 
 class Home extends Component {
+  componentDidMount () {
+    const WS_PROVIDER = 'wss://dev-node.substrate.dev:9944'
+    const provider = new WsProvider(WS_PROVIDER)
+    console.log(provider, 'provider')
+    ApiPromise.create(provider).then(api => {
+      console.log(api, 'api')
+      api.isReady.then(resp => {
+        console.log(resp, 'resp')
+      }).catch(e => {
+        console.log(e, 'error')
+      })
+    })
+  }
+
   render() {
     return (
       <div className={styles.home}>
         <img className={styles.background} src="/icon_background.png" alt=""/>
         <div className={styles.title}>OMM</div>
         <div className={styles.doc}>
-          <p>oumuamua 是全球第一家区块链跨链数字货币抵押贷款金融平台。是基于波卡链、去中心化。用户通过在区块链上 抵押数字资产 的方式 获得USDT等稳定币借贷 的金融贷款服务平台。</p>
+          <p>oumuamua 是一家区块链跨链数字货币抵押贷款金融平台。是基于波卡链、去中心化。用户通过在区块链上 抵押数字资产 的方式 获得USDT等稳定币借贷 的金融贷款服务平台。</p>
         </div>
         <div className={styles.picBox}>
           <div className={styles.picItem}>
