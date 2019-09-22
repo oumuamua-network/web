@@ -2,28 +2,32 @@ import React from 'react'
 import Component from '@/Component'
 import classs from 'classnames'
 import { ApiPromise, WsProvider } from '@polkadot/api';
-import keyring from '@polkadot/ui-keyring';
+// import keyring from '@polkadot/ui-keyring';
+import { getTypeRegistry } from '@polkadot/types';
+
 import styles from './home.scss'
 
 class Home extends Component {
   componentDidMount () {
-    const WS_PROVIDER = 'wss://dev-node.substrate.dev:9944'
+    const WS_PROVIDER = 'ws://127.0.0.1:9944/'
     const provider = new WsProvider(WS_PROVIDER)
+    getTypeRegistry().register({"TokenBalance": "u64"});
     console.log(provider, 'provider')
     ApiPromise.create(provider).then(api => {
-      console.log(api, 'api')
       api.isReady.then(resp => {
-        console.log(resp, 'resp')
+        window.oumuamua = resp._extrinsics.oumuamua
+        console.log('链接成功')
       }).catch(e => {
         console.log(e, 'error')
+        console.log('链接失败')
       })
     })
 
-    keyring.loadAll({
-      isDevelopment: true
-    });
+    // keyring.loadAll({
+    //   isDevelopment: true
+    // });
 
-    console.log(keyring, 'keyring')
+    // console.log(keyring, 'keyring')
   }
 
   render() {
